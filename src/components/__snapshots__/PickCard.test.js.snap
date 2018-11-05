@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches last snapshot 1`] = `
+<div
+  className="pickCard"
+>
+  Diviner it's time to pick a card
+</div>
+`;

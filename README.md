@@ -1,3 +1,21 @@
+# Diviner: Pull Tarot cards from the Rider-Waite deck
+
+## MVP Featuers
+
+* User can choose to pull an individual new card by clicking
+* Card already pulled will not be pulled again
+* Adds card to horizontal listing of cards which is flex boxed
+* Write-ups shown below card or to the side of the card or on hover in tooltip popup?
+* URL encoded / bookmarkable result: `/reading/:layout(simple)/:shortCode1/:shortCode2,...?`
+* Available card data:
+  * https://github.com/ekelen/tarot-api/blob/master/data/card_data_v2.json
+  * Card images from:
+    - http://www.sacred-texts.com/tarot/pkt/img/wa10.jpg
+    - http://rider-waite.tarotsmith.net/cards/21world.html
+    - https://www.wikiwand.com/en/Rider-Waite_tarot_deck
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

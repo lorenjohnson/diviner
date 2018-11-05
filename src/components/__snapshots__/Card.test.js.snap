@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches last snapshot 1`] = `
+<div
+  className="card"
+  onClick={[Function]}
+>
+  <div
+    className="card-front "
+  >
+    <img
+      src="/frontimage.jpg"
+    />
+  </div>
+  <div
+    className="card-back hidden-side"
+  >
+    <img
+      alt="cardBack"
+      src="/backimage.jpg"
+    />
+  </div>
+</div>
+`;

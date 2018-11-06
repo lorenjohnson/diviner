@@ -14,7 +14,7 @@ export function getCard (cardId, allCards) {
   return find(c => c.cardId === cardId, allCards)
 }
 
-export const CARD_PROP_TYPE = PropTypes.shape({
+export const CARD_PROP_TYPES = {
   cardId: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
@@ -24,11 +24,13 @@ export const CARD_PROP_TYPE = PropTypes.shape({
   desc: PropTypes.string,
   meaningLong: PropTypes.string,
   meaningShort: PropTypes.string
-})
+}
 
 export const DECK_PROP_TYPE = PropTypes.shape({
   backImageURL: PropTypes.string.isRequired,
-  cards: PropTypes.arrayOf(CARD_PROP_TYPE).isRequired
+  cards: PropTypes.arrayOf(
+    PropTypes.shape(CARD_PROP_TYPES)
+  ).isRequired
 })
 
 export const SAMPLE_CARD = {

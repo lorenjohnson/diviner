@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { CARD_PROP_TYPE } from 'util/deck'
+import { CARD_PROP_TYPES } from 'util/deck'
 
 export default function CardDetail ({ card, className }) {
   return <div className={classNames(className)}>
@@ -13,6 +13,6 @@ export default function CardDetail ({ card, className }) {
 }
 
 CardDetail.propTypes = {
-  card: CARD_PROP_TYPE.isRequired,
+  card: PropTypes.shape(CARD_PROP_TYPES).isRequired,
   className: PropTypes.string
 }

@@ -2,12 +2,16 @@ import React from 'react'
 import ReactTestRenderer from 'react-test-renderer'
 import App, { drawCard } from './App'
 
+// TODO:
+// test detail card vs description switch
+// test showCardDetail?
+
 describe('App', () => {
   it('renders without crashing', () => {
     ReactTestRenderer.create(<App />)
   })
 
-  it('renders drawn cards', () => {
+  it('draws and renders drawn cards', () => {
     const testDeck = {
       cards: [
         { imageURL: '/3', cardId: '3' },

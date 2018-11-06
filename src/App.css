@@ -1,23 +1,49 @@
 .App {
   display: flex;
+  justify-content: space-between;
+  min-height: calc(100vh - 10em);
+  width: calc(100vw - 10em);
+  padding: 5em;
+  background-color: black;
+  color: antiquewhite;
+  box-shadow: inset 0px 0px 100px #44a4e2;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.sidebar {
-  width: 300px;
-  height: 100vh;
+.left-sidebar {
+  width: fit-content;
 }
 
-.sidebard .deck {
+.draw-card {
+  box-shadow: -10px 10px 2px 0px antiquewhite;
+  border: solid 0.7px #d3d3d3bd;
+  filter: opacity(59%);
+  cursor: pointer;
 }
 
-.sidebar .deck img {
-  width: 200px;
-  height: auto;
+.draw-card:hover {
+  filter: unset;
+}
+
+.draw-card .card-front:hover:after {
+  content: 'Draw';
+  text-shadow: 4px 4px 20px #44a4e2;
+  position: absolute;
+  margin-top: 1rem;
+  left: 3.6em;
+  display: flex;
+  font-size: 3em;
+  color: white;
 }
 
 .drawn-cards {
   display: flex;
-  flex-direction: row;
+  margin-right: auto;
   flex-wrap: wrap;
-  max-width: 100vw;
+  max-height: fit-content;
+}
+
+.right-sidebar {
+  min-width: 20rem;
+  max-width: 20rem;
 }

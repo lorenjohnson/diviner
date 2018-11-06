@@ -4,20 +4,23 @@ exports[`matches last snapshot 1`] = `
 <div
   className="card"
   onClick={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
 >
   <div
-    className="card-front "
+    className="card-back"
   >
     <img
-      src="/frontimage.jpg"
+      alt="/backimage.jpg"
+      src="/backimage.jpg"
     />
   </div>
   <div
-    className="card-back hidden-side"
+    className="card-front"
   >
     <img
-      alt="cardBack"
-      src="/backimage.jpg"
+      alt="/frontimage.jpg"
+      src="/frontimage.jpg"
     />
   </div>
 </div>

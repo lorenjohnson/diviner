@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches last snapshot 1`] = `
+<div
+  className=""
+>
+  <h1 />
+  <p>
+    Card 1 description
+  </p>
+  <h2>
+    Meaning
+  </h2>
+  <p>
+    Long very meaningful words.
+  </p>
+</div>
+`;

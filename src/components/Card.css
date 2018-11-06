@@ -1,54 +1,31 @@
 .card {
-  margin: 10px;
-  border-radius: 6px;
-  box-shadow: 0px 2px 6px 0px black;
-  transform-origin: 100% 213.5px; /* half of height */
-
-  max-height: 570px;
-  max-width: 345px;
-
-}
-
-.card-front {
-  padding: 20px;
+  margin: 1em;
+  border-radius: 16px;
+  background-color: oldlace;
+  box-shadow: 0px 2px 6px 0px rgba(245, 243, 243, 0.61);
+  cursor: pointer;
 }
 
 .card img {
-  max-width: 100%;
-  height: auto;
-  /* max-height: 530px;
-  max-width: 305px; */
+  padding: 1em;
+  /* Fixing height/width as proportions of the front
+  and back images are not exaclty the same */
+  height: calc(17.3 * 1.6rem);
+  width: calc(10 * 1.6rem);
 }
 
-.card-back {
-}
+/* Display card back when face-down and front when not */
 
-.hidden-side {
+.card.face-down .card-front,
+.card:not(.face-down) .card-back {
   display: none;
 }
 
-
-/* to be explored for card flipping animation */
-
-.card-back {
-  transform: rotateX(180deg);
-}
-.card-front.hidden-side {
-  transform: rotateX(-180deg);
+.drawn-cards:hover .card {
+  opacity: 0.7;
 }
 
-.vertical.flip-container {
-	position: relative;
-}
-
-.vertical .back {
-  transform: rotateX(180deg);
-}
-
-.vertical.flip-container .flipper {
-  transform-origin: 100% 213.5px; /* half of height */
-}
-
-.vertical.flip-container:hover .flipper {
-  transform: rotateX(-180deg);
+.drawn-cards .card:not(.face-down):hover {
+  opacity: 1;
+  box-shadow: 3px 3px 0px 0px rgba(245, 243, 243, 0.61);
 }

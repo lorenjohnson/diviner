@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders drawn cards 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="left-sidebar"
+  >
+    <div
+      className="deck"
+    >
+      <div
+        className="draw-card card"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <div
+          className="card-back"
+        >
+          <img
+            alt="/backimage.png"
+            src="/backimage.png"
+          />
+        </div>
+        <div
+          className="card-front"
+        >
+          <img
+            alt="/backimage.png"
+            src="/backimage.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="drawn-cards"
+  >
+    <div
+      className="card"
+      onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <div
+        className="card-back"
+      >
+        <img
+          alt="/backimage.png"
+          src="/backimage.png"
+        />
+      </div>
+      <div
+        className="card-front"
+      >
+        <img
+          alt="/3"
+          src="/3"
+        />
+      </div>
+    </div>
+    <div
+      className="card"
+      onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <div
+        className="card-back"
+      >
+        <img
+          alt="/backimage.png"
+          src="/backimage.png"
+        />
+      </div>
+      <div
+        className="card-front"
+      >
+        <img
+          alt="/4"
+          src="/4"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="right-sidebar"
+  >
+    <div
+      className="diviner-introduction"
+    >
+      <h2>
+        Welcome to Diviner
+      </h2>
+      <p>
+        Click on the card to the right to draw a card from the Rider-Waite Tarot deck.
+      </p>
+      <p>
+        You can turn over as many cards as you like and if you roll-over any of the turned-over cards you'll see a more in-depth description of the card.
+      </p>
+    </div>
+  </div>
+</div>
+`;

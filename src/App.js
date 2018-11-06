@@ -1,52 +1,90 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
-  DECK_PROP_TYPES,
+  DECK_PROP_TYPE,
   DEFAULT_DECK,
-  getRandomCard
+  getRandomCard,
+  getCard
 } from 'util/deck'
 import Card from 'components/Card'
+import CardDetail from 'components/CardDetail'
 import './App.css'
+
+export function drawCard (state, props) {
+  const { drawnCards } = state
+  const { currentDeck, drawCardFunction } = props
+  const drawnCard = drawCardFunction(currentDeck.cards, drawnCards)
+
+  if (!drawnCard) return null
+
+  return {
+    drawnCards: [...drawnCards, drawnCard]
+  }
+}
 
 export default class App extends Component {
   static propTypes = {
-    currentDeck: DECK_PROP_TYPES,
-    drawCard: PropTypes.func.isRequired
+    currentDeck: DECK_PROP_TYPE,
+    drawCardFunction: PropTypes.func.isRequired
   }
 
   static defaultProps = {
     currentDeck: DEFAULT_DECK,
-    drawCard: getRandomCard
+    drawCardFunction: getRandomCard
   }
 
   state = {
-    drawnCards: []
+    drawnCards: [],
+    detailCard: undefined
   }
 
-  drawCard = (drawnCards) => {
-    const { currentDeck, drawCard } = this.props
-    const drawnCard = drawCard(currentDeck.cards, drawnCards)
-    this.setState({
-      drawnCards: [...drawnCards, drawnCard]
-    })
-  }
+  drawCard = () => this.setState(drawCard)
+
+  showCardDetail = cardId => this.setState(state => ({
+    detailCard: getCard(cardId, this.props.currentDeck.cards)
+  }))
+
+  hideCardDetail = () => this.setState(state => ({
+    detailCard: undefined
+  }))
 
   render () {
-    const { drawnCards } = this.state
-    const { currentDeck } = this.props
-    const drawCard = () => this.drawCard(drawnCards)
+    const { currentDeck: { backImageURL } } = this.props
+    const { drawnCards, detailCard } = this.state
 
     return (
       <div className='App'>
-        <div className='sidebar'>
+        <div className='left-sidebar'>
           <div className='deck'>
-            <img src={'/images/drawcard.png'} onClick={drawCard} />
+            <Card frontImageURL={backImageURL}
+              backImageURL={backImageURL}
+              className='draw-card'
+              onClick={this.drawCard} />
           </div>
         </div>
         <div className='drawn-cards'>
-          {drawnCards.map(({ name, imageURL, shortName }, index) =>
-            <Card name={name} frontImageURL={imageURL} backImageURL={currentDeck.backImageURL} key={shortName} />
+          {drawnCards.map(({ imageURL, cardId }) =>
+            <Card cardId={cardId}
+              frontImageURL={imageURL}
+              backImageURL={backImageURL}
+              onMouseOver={this.showCardDetail}
+              onMouseOut={this.hideCardDetail}
+              key={cardId} />
           )}
+        </div>
+        <div className='right-sidebar'>
+          {detailCard &&
+            <CardDetail className='card-detail' card={detailCard} />}
+          {!detailCard && <div className='diviner-introduction'>
+            <h2>Welcome to Diviner</h2>
+            <p>
+              Click on the card to the right to draw a card from the Rider-Waite Tarot deck.
+            </p>
+            <p>
+              You can turn over as many cards as you like and if you roll-over any of the turned-over
+              cards you'll see a more in-depth description of the card.
+            </p>
+          </div>}
         </div>
       </div>
     )

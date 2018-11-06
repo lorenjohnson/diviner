@@ -28,6 +28,16 @@
   ],
   "standard": {
     "parser": "babel-eslint",
+    "global": [
+      "afterAll",
+      "afterEach",
+      "beforeAll",
+      "beforeEach",
+      "describe",
+      "expect",
+      "it",
+      "jest"
+    ],
     "env": [
       "jest",
       "es6",

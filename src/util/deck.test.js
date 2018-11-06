@@ -37,8 +37,8 @@ describe('getRandomCard', () => {
 
 test('getCard', () => {
   const cards = [
-    {cardId: 'cardId1', description: 'thing1'},
-    {cardId: 'cardId2', description: 'thing2'}
+    { cardId: 'cardId1', description: 'thing1' },
+    { cardId: 'cardId2', description: 'thing2' }
   ]
 
   expect(getCard('cardId1', cards)).toEqual(cards[0])

@@ -6,7 +6,6 @@
 * Card already pulled will not be pulled again
 * Adds card to horizontal listing of cards which flexbox wraps
 * Write-ups shown below card or to the side of the card or on hover in tooltip popup?
-* URL encoded / bookmarkable result: `/reading/:layout(simple)/:shortCode1/:shortCode2,...?`
 * Available card data:
   * https://github.com/ekelen/tarot-api/blob/master/data/card_data_v2.json
   * Card images from:
@@ -20,7 +19,7 @@
 * Focus is on best-practice and cleanliness over complexity
 * In this I'm hoping to demonstrate my fluency in constructing a fairly basic React application well, there are various opinions throughout the community about the best way to do things and this project is an expression of some of my (loosely held) own.
 * The next features I would add for the sake of the project and as a showcase for dev proficiecy and style in the React stack:
-  * react-navigation 4: I like it and it would make a great next thing to add to this stack to make the the URLs of a particular card pull/reading bookmarkable before adding any specific user auth stuff
+  * react-navigation 4: I like it and it would make a great next thing to add to this stack to make the the URLs of a particular card pull/reading bookmarkable before adding any specific user auth stuff. I would start with a URL encoded / bookmarkable result such as: `/reading/:layout(simple)/:shortCode1/:shortCode2,...?`
   * Redux: nothing about this app currently needs a global state machine, but everything eventually does and I almost added it just to demonstrate my familiarity, but stopped short. I do work extensively with Redux and a Graphql API from our backend in my current work.
 * It's been awhile since I've had time outside of my work projects to do a personal project and I hope to extend this one further. This is a much simpler project than anything I'm currently working on in my job.
 

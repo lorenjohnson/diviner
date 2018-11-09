@@ -16,7 +16,7 @@
 .draw-card {
   box-shadow: -10px 10px 2px 0px antiquewhite;
   border: solid 0.7px #d3d3d3bd;
-  filter: opacity(59%);
+  filter: opacity(60%);
   cursor: pointer;
   transition: filter 1s ease;
 }
@@ -29,7 +29,7 @@
   opacity: 0.5;
 }
 
-.drawn-cards .card:not(.face-down):hover {
+.drawn-cards .card:hover {
   opacity: 1;
   box-shadow: 3px 3px 0px 0px rgba(245, 243, 243, 0.61);
 }
@@ -47,22 +47,23 @@
 }
 
 .diviner-introduction {
-  animation-delay: 2s;
-  animation: slide-over 1s ease;
+  width: 500px;
+  padding: 40px;
+  animation: slide-over 20s ease;
 }
 
 .card-detail {
-  animation-delay: 2s;
-  animation: slide-over 1s ease;
+  animation: slide-over 1.5s ease;
 }
 
 @keyframes slide-over {
   0% {
-      opacity: 0;
-      transform: translateY(-40px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.95;
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -11,7 +11,7 @@ exports[`App draws and renders drawn cards 1`] = `
       className="deck"
     >
       <div
-        className="draw-card card"
+        className="draw-card card face-down"
         onClick={[Function]}
         onMouseOut={[Function]}
         onMouseOver={[Function]}
@@ -39,7 +39,7 @@ exports[`App draws and renders drawn cards 1`] = `
     className="drawn-cards"
   >
     <div
-      className="card"
+      className="card face-down"
       onClick={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
@@ -62,7 +62,7 @@ exports[`App draws and renders drawn cards 1`] = `
       </div>
     </div>
     <div
-      className="card"
+      className="card face-down"
       onClick={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
@@ -87,31 +87,7 @@ exports[`App draws and renders drawn cards 1`] = `
   </div>
   <div
     className="right-sidebar"
-  >
-    <div
-      className="diviner-introduction"
-    >
-      <h2>
-        Welcome to Diviner
-      </h2>
-      <h3>
-        "For what we don't know..."
-      </h3>
-      <p>
-        Click on the card to the right to pick a random card from the 
-        <a
-          href="https://www.wikiwand.com/en/Rider-Waite_tarot_deck"
-          target="_blank"
-        >
-          Rider-Waite Tarot deck
-        </a>
-        .
-      </p>
-      <p>
-        You can turn over as many cards as you like and if you roll-over any of the turned-over cards you'll see a more in-depth description of the card.
-      </p>
-    </div>
-  </div>
+  />
 </div>
 `;
 
@@ -126,7 +102,7 @@ exports[`App shows detail card if set 1`] = `
       className="deck"
     >
       <div
-        className="draw-card card"
+        className="draw-card card face-down"
         onClick={[Function]}
         onMouseOut={[Function]}
         onMouseOver={[Function]}

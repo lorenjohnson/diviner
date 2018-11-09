@@ -19,7 +19,7 @@ export default class Card extends Component {
   }
 
   state = {
-    faceDown: false
+    faceDown: true
   }
 
   flipOver = () => this.setState(state => ({ faceDown: !state.faceDown }))

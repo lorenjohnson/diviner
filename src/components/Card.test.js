@@ -31,7 +31,7 @@ describe('Card', () => {
     component.getInstance().onClick()
     expect(props.onClick).toHaveBeenCalledWith(props.cardId)
     component.getInstance().onMouseOver()
-    expect(props.onMouseOver).toHaveBeenCalledWith(props.cardId)
+    expect(props.onMouseOver).not.toHaveBeenCalled()
     component.getInstance().onMouseOut()
     expect(props.onMouseOut).toHaveBeenCalledWith(props.cardId)
   })

@@ -2,7 +2,7 @@
 
 exports[`Card renders correctly when face down 1`] = `
 <div
-  className="card face-down"
+  className="card"
   onClick={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -28,7 +28,7 @@ exports[`Card renders correctly when face down 1`] = `
 
 exports[`Card renders with required props 1`] = `
 <div
-  className="card"
+  className="card face-down"
   onClick={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}

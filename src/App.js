@@ -51,6 +51,7 @@ export default class App extends Component {
   render () {
     const { currentDeck: { backImageURL } } = this.props
     const { drawnCards, detailCard } = this.state
+    const showIntro = !detailCard && drawnCards.length < 1
 
     return (
       <div className='App'>
@@ -71,10 +72,10 @@ export default class App extends Component {
               onMouseOut={this.hideCardDetail}
               key={cardId} />
           )}
+          {showIntro && <DivinerIntro />}
         </div>
         <div className='right-sidebar'>
           {detailCard && <CardDetail className='card-detail' card={detailCard} />}
-          {!detailCard && <DivinerIntro />}
         </div>
       </div>
     )
@@ -83,10 +84,10 @@ export default class App extends Component {
 
 function DivinerIntro () {
   return <div className='diviner-introduction'>
-    <h2>Welcome to Diviner</h2>
+    <h1>Welcome to Diviner</h1>
     <h3>"For what we don't know..."</h3>
     <p>
-      Click on the card to the right to pick a random card from the <a href='https://www.wikiwand.com/en/Rider-Waite_tarot_deck' target='_blank'>Rider-Waite Tarot deck</a>.
+      Click on the card to the right to pick a random card from the <a href='https://www.wikiwand.com/en/Rider-Waite_tarot_deck' target='_blank' rel='noopener noreferrer'>Rider-Waite Tarot Tarot</a> deck.
     </p>
     <p>
       You can turn over as many cards as you like and if you roll-over any of the turned-over cards you'll see a more in-depth description of the card.

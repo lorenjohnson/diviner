@@ -77,6 +77,7 @@ export default class App extends Component {
             <CardDetail className='card-detail' card={detailCard} />}
           {!detailCard && <div className='diviner-introduction'>
             <h2>Welcome to Diviner</h2>
+            <h3>What you don't no</h3>
             <p>
               Click on the card to the right to draw a card from the Rider-Waite Tarot deck.
             </p>

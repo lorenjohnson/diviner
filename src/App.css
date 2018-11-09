@@ -19,10 +19,20 @@
   border: solid 0.7px #d3d3d3bd;
   filter: opacity(59%);
   cursor: pointer;
+  transition: filter 1s ease;
 }
 
 .draw-card:hover {
   filter: unset;
+}
+
+.drawn-cards:hover .card {
+  opacity: 0.5;
+}
+
+.drawn-cards .card:not(.face-down):hover {
+  opacity: 1;
+  box-shadow: 3px 3px 0px 0px rgba(245, 243, 243, 0.61);
 }
 
 .draw-card .card-front:hover:after {
@@ -46,4 +56,23 @@
 .right-sidebar {
   min-width: 20rem;
   max-width: 20rem;
+}
+
+.diviner-introduction {
+  animation: slide-over 1s ease;
+}
+
+.card-detail {
+  animation: slide-over 1s ease;
+}
+
+@keyframes slide-over {
+  0% {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }

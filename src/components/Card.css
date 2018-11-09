@@ -4,6 +4,7 @@
   background-color: oldlace;
   box-shadow: 0px 2px 6px 0px rgba(245, 243, 243, 0.61);
   cursor: pointer;
+  transition: opacity 1s ease;
 }
 
 .card img {
@@ -21,11 +22,7 @@
   display: none;
 }
 
-.drawn-cards:hover .card {
-  opacity: 0.7;
-}
-
-.drawn-cards .card:not(.face-down):hover {
-  opacity: 1;
-  box-shadow: 3px 3px 0px 0px rgba(245, 243, 243, 0.61);
+.card:not(.face-down):hover {
+  opacity: unset;
+  box-shadow: initial;
 }

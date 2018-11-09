@@ -28,7 +28,7 @@ export default class Card extends Component {
     ? this.props.onClick(this.props.cardId)
     : this.flipOver(this.state.faceDown)
 
-  onMouseOver = () => this.props.onMouseOver
+  onMouseOver = () => this.props.onMouseOver && !this.state.faceDown
     ? this.props.onMouseOver(this.props.cardId)
     : undefined
 

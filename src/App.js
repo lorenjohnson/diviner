@@ -86,7 +86,7 @@ function DivinerIntro () {
     <h2>Welcome to Diviner</h2>
     <h3>What you don't know</h3>
     <p>
-      Click on the card to the right to pick a random card from the <a href='https://www.wikiwand.com/en/Rider-Waite_tarot_deck'>Rider-Waite Tarot deck</a>.
+      Click on the card to the right to pick a random card from the <a href='https://www.wikiwand.com/en/Rider-Waite_tarot_deck' target='_blank'>Rider-Waite Tarot deck</a>.
     </p>
     <p>
       You can turn over as many cards as you like and if you roll-over any of the turned-over cards you'll see a more in-depth description of the card.

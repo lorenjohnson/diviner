@@ -34,18 +34,6 @@
   box-shadow: 3px 3px 0px 0px rgba(245, 243, 243, 0.61);
 }
 
-/* this is a little bit terrible */
-/* .draw-card .card-front:hover:after {
-  content: 'Draw';
-  text-shadow: 4px 4px 20px #44a4e2;
-  position: relative;
-  margin-top: 1rem;
-  left: 3.6em;
-  display: flex;
-  font-size: 2em;
-  color: white;
-} */
-
 .drawn-cards {
   display: flex;
   margin-right: auto;

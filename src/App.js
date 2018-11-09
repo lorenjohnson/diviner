@@ -73,21 +73,24 @@ export default class App extends Component {
           )}
         </div>
         <div className='right-sidebar'>
-          {detailCard &&
-            <CardDetail className='card-detail' card={detailCard} />}
-          {!detailCard && <div className='diviner-introduction'>
-            <h2>Welcome to Diviner</h2>
-            <h3>What you don't no</h3>
-            <p>
-              Click on the card to the right to draw a card from the Rider-Waite Tarot deck.
-            </p>
-            <p>
-              You can turn over as many cards as you like and if you roll-over any of the turned-over
-              cards you'll see a more in-depth description of the card.
-            </p>
-          </div>}
+          {detailCard && <CardDetail className='card-detail' card={detailCard} />}
+          {!detailCard && <DivinerIntro />}
         </div>
       </div>
     )
   }
+}
+
+function DivinerIntro () {
+  return <div className='diviner-introduction'>
+    <h2>Welcome to Diviner</h2>
+    <h3>What you don't know</h3>
+    <p>
+      Click on the card to the right to draw a card from the Rider-Waite Tarot deck.
+    </p>
+    <p>
+      You can turn over as many cards as you like and if you roll-over any of the turned-over
+      cards you'll see a more in-depth description of the card.
+    </p>
+  </div>
 }

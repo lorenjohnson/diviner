@@ -40,6 +40,14 @@ export const SAMPLE_CARD = {
   imageURL: 'anything'
 }
 
+export const TEST_DECK = {
+  cards: [
+    { imageURL: '/3', cardId: '3' },
+    { imageURL: '/4', cardId: '4' }
+  ],
+  backImageURL: '/backimage.png'
+}
+
 // The original Rider-Waite deck back
 // taken from: https://i.pinimg.com/originals/74/b3/55/74b355023cfe202a3ee3d9c21175f0a3.png
 export const DEFAULT_DECK_BACK_IMAGE = '/images/default_deck_back.png'

@@ -94,12 +94,70 @@ exports[`App draws and renders drawn cards 1`] = `
       <h2>
         Welcome to Diviner
       </h2>
+      <h3>
+        What you don't know
+      </h3>
       <p>
         Click on the card to the right to draw a card from the Rider-Waite Tarot deck.
       </p>
       <p>
         You can turn over as many cards as you like and if you roll-over any of the turned-over cards you'll see a more in-depth description of the card.
       </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App shows detail card if set 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="left-sidebar"
+  >
+    <div
+      className="deck"
+    >
+      <div
+        className="draw-card card"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <div
+          className="card-back"
+        >
+          <img
+            alt="/backimage.png"
+            src="/backimage.png"
+          />
+        </div>
+        <div
+          className="card-front"
+        >
+          <img
+            alt="/backimage.png"
+            src="/backimage.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="drawn-cards"
+  />
+  <div
+    className="right-sidebar"
+  >
+    <div
+      className="card-detail"
+    >
+      <h1 />
+      <p />
+      <h2>
+        Meaning
+      </h2>
+      <p />
     </div>
   </div>
 </div>

@@ -1,15 +1,55 @@
 import React from 'react'
 import ReactTestRenderer from 'react-test-renderer'
-import Card from './Card'
+import Card, { CardImage } from './Card'
 
-// TODO:
-// Show cardId is sent through each callback method
-// flipOver function state change and render check
-// Snapshot CardImage and/or move to it's own file
+const requiredProps = {
+  frontImageURL: '/frontimage.jpg',
+  backImageURL: '/backimage.jpg'
+}
 
-it('matches last snapshot', () => {
+describe('Card', () => {
+  it('renders with required props', () => {
+    const component = ReactTestRenderer.create(
+      <Card {...requiredProps} />
+    )
+
+    expect(component.toJSON()).toMatchSnapshot()
+  })
+
+  it('sends id to all event callbacks', () => {
+    const props = {
+      ...requiredProps,
+      cardId: 'testId',
+      onClick: jest.fn(),
+      onMouseOver: jest.fn(),
+      onMouseOut: jest.fn()
+    }
+    const component = ReactTestRenderer.create(
+      <Card {...props} />
+    )
+
+    component.getInstance().onClick()
+    expect(props.onClick).toHaveBeenCalledWith(props.cardId)
+    component.getInstance().onMouseOver()
+    expect(props.onMouseOver).toHaveBeenCalledWith(props.cardId)
+    component.getInstance().onMouseOut()
+    expect(props.onMouseOut).toHaveBeenCalledWith(props.cardId)
+  })
+
+  it('renders correctly when face down', () => {
+    const component = ReactTestRenderer.create(
+      <Card {...requiredProps} />
+    )
+
+    component.getInstance().flipOver()
+    expect(component.toJSON()).toMatchSnapshot()    
+  })
+})
+
+test('CardImage', () => {
   const component = ReactTestRenderer.create(
-    <Card frontImageURL='/frontimage.jpg' backImageURL='/backimage.jpg' />
+    <CardImage imageURL={'/this-is-normal'} className={'expectedClassName'} />
   )
+
   expect(component.toJSON()).toMatchSnapshot()
 })

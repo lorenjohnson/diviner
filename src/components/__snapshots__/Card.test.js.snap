@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches last snapshot 1`] = `
+exports[`Card renders correctly when face down 1`] = `
+<div
+  className="card face-down"
+  onClick={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <div
+    className="card-back"
+  >
+    <img
+      alt="/backimage.jpg"
+      src="/backimage.jpg"
+    />
+  </div>
+  <div
+    className="card-front"
+  >
+    <img
+      alt="/frontimage.jpg"
+      src="/frontimage.jpg"
+    />
+  </div>
+</div>
+`;
+
+exports[`Card renders with required props 1`] = `
 <div
   className="card"
   onClick={[Function]}
@@ -23,5 +49,16 @@ exports[`matches last snapshot 1`] = `
       src="/frontimage.jpg"
     />
   </div>
+</div>
+`;
+
+exports[`CardImage 1`] = `
+<div
+  className="expectedClassName"
+>
+  <img
+    alt="/this-is-normal"
+    src="/this-is-normal"
+  />
 </div>
 `;

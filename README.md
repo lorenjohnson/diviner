@@ -30,5 +30,5 @@
  1. Clone repo
  2. `npm install`
  3. Run tests (Jest): `yarn test` 
- 3. Launching it: `yarn start`
+ 3. Run it: `yarn start`
 

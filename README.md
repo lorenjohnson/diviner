@@ -5,13 +5,10 @@
 * User can choose to pull an individual new card by clicking
 * Card already pulled will not be pulled again
 * Adds card to horizontal listing of cards which flexbox wraps
-* Write-ups shown below card or to the side of the card or on hover in tooltip popup?
-* Available card data:
-  * https://github.com/ekelen/tarot-api/blob/master/data/card_data_v2.json
-  * Card images from:
-    - http://www.sacred-texts.com/tarot/pkt/img/wa10.jpg
-    - http://rider-waite.tarotsmith.net/cards/21world.html
-    - https://www.wikiwand.com/en/Rider-Waite_tarot_deck
+* Write-ups shown below card or to the side of the card
+* Data credits (the Rider-Waite Tarot deck is Public Domain in the US):
+  * Data from here: https://github.com/ekelen/tarot-api/blob/master/data/card_data_v2.json
+  * Images currently directly linked from: http://www.sacred-texts.com/tarot/pkt/index.htm
 ## Implementation notes
 
 * Boilerplate app created with create-react-app to keep it simple

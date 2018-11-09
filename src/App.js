@@ -84,7 +84,7 @@ export default class App extends Component {
 function DivinerIntro () {
   return <div className='diviner-introduction'>
     <h2>Welcome to Diviner</h2>
-    <h3>What you don't know</h3>
+    <h3>"For what we don't know..."</h3>
     <p>
       Click on the card to the right to pick a random card from the <a href='https://www.wikiwand.com/en/Rider-Waite_tarot_deck' target='_blank'>Rider-Waite Tarot deck</a>.
     </p>

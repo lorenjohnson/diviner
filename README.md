@@ -1,5 +1,7 @@
 # Diviner: Pull Tarot cards from the Rider-Waite deck
 
+**Try me now at: https://divinerly.herokuapp.com**
+
 ## Sample Code/MVP Featuers
 
 * User can choose to pull an individual new card by clicking

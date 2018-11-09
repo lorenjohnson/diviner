@@ -5,7 +5,6 @@
   width: calc(100vw - 10em);
   padding: 5em;
   background-color: black;
-  color: antiquewhite;
   box-shadow: inset 0px 0px 100px #44a4e2;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -35,16 +34,17 @@
   box-shadow: 3px 3px 0px 0px rgba(245, 243, 243, 0.61);
 }
 
-.draw-card .card-front:hover:after {
+/* this is a little bit terrible */
+/* .draw-card .card-front:hover:after {
   content: 'Draw';
   text-shadow: 4px 4px 20px #44a4e2;
-  position: absolute;
+  position: relative;
   margin-top: 1rem;
   left: 3.6em;
   display: flex;
-  font-size: 3em;
+  font-size: 2em;
   color: white;
-}
+} */
 
 .drawn-cards {
   display: flex;
@@ -59,31 +59,22 @@
 }
 
 .diviner-introduction {
+  animation-delay: 2s;
   animation: slide-over 1s ease;
 }
 
 .card-detail {
+  animation-delay: 2s;
   animation: slide-over 1s ease;
 }
 
 @keyframes slide-over {
   0% {
       opacity: 0;
-      transform: translateX(20px);
+      transform: translateY(-40px);
   }
   100% {
       opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-@keyframes turn-over {
-  0% {
-      opacity: 0;
-      transform: translateX(20px);
-  }
-  100% {
-      opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
   }
 }

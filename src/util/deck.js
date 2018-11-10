@@ -2,12 +2,13 @@ import { difference, find } from 'lodash/fp'
 import { random } from 'lodash'
 import PropTypes from 'prop-types'
 
-export function getRandomCard (allCards, drawnCards) {
+export function getRandomCard (allCards, drawnCards, includeReversed = false) {
   const remainingCards = difference(allCards, drawnCards)
   if (remainingCards.length === 0) return null
   const drawnCardIndex = random(remainingCards.length - 1)
+  const reversed = includeReversed && random(1, 2) === 2
 
-  return remainingCards[drawnCardIndex]
+  return { ...remainingCards[drawnCardIndex], reversed }
 }
 
 export function getCard (cardId, allCards) {

@@ -13,7 +13,7 @@ import './App.css'
 export function drawCard (state, props) {
   const { drawnCards } = state
   const { currentDeck, drawCardFunction } = props
-  const drawnCard = drawCardFunction(currentDeck.cards, drawnCards)
+  const drawnCard = drawCardFunction(currentDeck.cards, drawnCards, true)
 
   if (!drawnCard) return null
 
@@ -64,10 +64,11 @@ export default class App extends Component {
           </div>
         </div>
         <div className='drawn-cards'>
-          {drawnCards.map(({ imageURL, cardId }) =>
+          {drawnCards.map(({ imageURL, cardId, reversed }) =>
             <Card cardId={cardId}
               frontImageURL={imageURL}
               backImageURL={backImageURL}
+              reversed={reversed}
               onMouseOver={this.showCardDetail}
               onMouseOut={this.hideCardDetail}
               key={cardId} />

@@ -28,5 +28,5 @@
 }
 
 .card.reversed {
-  transform: scaleY(-1);
+  transform: rotate(180deg);
 }

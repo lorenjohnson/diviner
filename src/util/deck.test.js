@@ -36,7 +36,7 @@ describe('getRandomCard', () => {
   })
 
   it('draws all cards', () => {
-    const fullDeck = [{ id: 'card1' }, { id: 'card2' }, { id: 'card3' }]
+    const fullDeck = [{ id: 'card1' }]
     const alreadyDrawnCards = [{ id: 'card2' }, { id: 'card3' }]
     const drawnCard = getRandomCard(fullDeck, alreadyDrawnCards)
 

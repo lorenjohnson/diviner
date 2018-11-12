@@ -49,7 +49,7 @@
 .diviner-introduction {
   width: 500px;
   padding: 40px;
-  animation: slide-over 20s ease;
+  animation: slide-over 10s ease;
 }
 
 .card-detail {

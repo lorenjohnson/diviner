@@ -37,11 +37,11 @@ export default class Card extends Component {
     : undefined
 
   render () {
-    const { frontImageURL, backImageURL, className } = this.props
+    const { frontImageURL, backImageURL, reversed, className } = this.props
     const { faceDown } = this.state
 
     return (
-      <div className={classNames(className, 'card', { 'face-down': faceDown })}
+      <div className={classNames(className, 'card', { 'face-down': faceDown, reversed })}
         onClick={this.onClick}
         onMouseOver={this.onMouseOver}
         onMouseOut={this.onMouseOut}>

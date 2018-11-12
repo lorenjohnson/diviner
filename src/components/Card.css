@@ -26,3 +26,7 @@
   opacity: unset;
   box-shadow: initial;
 }
+
+.card.reversed {
+  transform: rotate(180deg);
+}
